@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuento Infantil Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Librería PDF.js para leer el PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <!-- Librería PageFlip para el efecto de pasar página -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>📖 Cuento Infantil</h1>
+        
+        <!-- Barra de herramientas accesible y controles -->
+        <div class="controls-bar">
+            <!-- Botones de Tamaño de Vista/Texto -->
+            <div class="control-group">
+                <button id="btn-zoom-in" class="btn btn-zoom" title="Aumentar tamaño de letra / vista" aria-label="Aumentar tamaño">A+🔍</button>
+                <button id="btn-zoom-out" class="btn btn-zoom" title="Reducir tamaño de letra / vista" aria-label="Reducir tamaño">A-🔍</button>
+            </div>
+
+            <!-- Botones de Navegación -->
+            <div class="control-group">
+                <button id="btn-prev" class="btn btn-nav">⬅️ Anterior</button>
+                <span id="page-indicator" class="page-indicator">Página 1</span>
+                <button id="btn-next" class="btn btn-nav">Siguiente ➡️</button>
+            </div>
+
+            <!-- Botón de Lectura en Voz Alta -->
+            <div class="control-group">
+                <button id="btn-read-aloud" class="btn btn-audio">🔊 Leer en voz alta</button>
+            </div>
+        </div>
+
+        <div id="loading">Cargando el cuento, por favor espera un momento... 🎨</div>
+    </header>
+
+    <main class="book-container">
+        <!-- El flipbook se generará aquí -->
+        <div id="flip-book" class="flip-book"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
